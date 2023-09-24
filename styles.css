@@ -1,0 +1,277 @@
+.side-hero {
+    /* object-fit: cove r; */
+    width: min(500px, 40vw);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.freepik.com/premium-photo/cute-anime-woman-looking-cityscape-by-night-time-sad-moody-manga-lofi-style-3d-rendering_717906-998.jpg?w=2000");
+    background-size: cover; /* Adjust the background size as needed (cover, contain, etc.) */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the background image */
+}
+
+:root {
+    --text: #aaaaaa;
+    --background: #0d0709;
+    --primary: #25c18d;
+    --secondary: #0b1a38;
+    --accent: #36d9a2;
+}
+
+.logo-text {
+    color: white;
+    /* position: absolute; */
+    top: 0; 
+    right: 0;
+    font-size: 3.5rem;
+    margin-left: 15px;
+}
+
+form {
+    margin: auto;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.content {
+    display: flex;
+}
+
+.sign-up {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* box-shadow: 0 3px 7px rgb(252, 252, 252, 0.2); */
+    height: 330px; 
+}
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: max(calc(100vw - 500px), 50vw);
+}
+
+.form-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 80px);
+    height: 345px;
+    width: 100%;
+    gap: 0;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* max-width: 200px;
+    max-height: 100px; */
+    width: min(400px, 100%);
+    height: 75px;
+    /* margin: auto; */
+    margin-left: min(40px, 5vw);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+@media (min-width: 1550px) {
+    .form-section {
+        width: min(600px, 30vw);
+    }
+    input {
+        width: 100%;
+    }
+    .form-content {
+        column-gap: 0;
+        grid-template-columns: repeat(2, 0.25fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .form-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .side-hero {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        height: 200px;
+        left: 50vw;
+        width: 50vw;
+        transform: translateX(-50%);
+        padding: 0 200px 0 200px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+    
+    .logo-text {
+        font-size: 2.5rem;
+    }
+
+    .logo-wrapper {
+        position: absolute;
+        top: -140px;
+        height: 100px !important;
+        width: calc(100% + 400px) !important;
+        transform: translateX(-200px);
+    }
+
+    .logo {
+        width: 75px;
+        height: 150px;
+    }
+
+    .side-content {
+        width: 100vw;
+        align-items: center;
+        margin-top: 200px;
+        justify-content: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .bottom-wrapper {
+        margin-top: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    button[type="submit"] {
+        width: 346px !important;
+        margin-left: 0 !important;
+        margin-right: 50px !important;
+    }
+
+    .form-section {
+        margin-left: 0 !important;
+    }
+
+    .lin-text {
+        position: absolute;
+        bottom: 0;
+        margin-right: 100px;
+    }
+
+}
+
+button[type="submit"]:hover {
+    background-color: #e6007e;
+    color: var(--background);
+}
+
+.hype {
+    margin-left: min(40px, 5vw);
+    font-size: 1.4rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+h1 {
+    margin-left: min(40px, 5vw);
+    color: var(--text);
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+input:invalid {
+    border: 1px #8c1a09 solid;
+}
+
+#pwd::after {
+    content: "*Passwords do not match";
+    display: inline;
+}
+
+input {
+    height: 25px;
+    border-radius: 6px;
+    width: 85%;
+    border: none;
+    background-color: var(--background);
+    border: 1px solid rgb(77, 77, 77);
+    color: var(--text);
+}
+
+input:focus {
+    outline: 2px solid #e6007e;
+}
+
+label {
+    white-space: nowrap;
+    margin-bottom: 4px;
+    color: var(--text);
+    font-size: .9rem;
+}
+
+
+button[type="submit"] {
+    height: 50px;
+    width: min(200px, 15vw);
+    border-radius: 6px;
+    margin-left: min(40px, 5vw);
+    background-color: var(--background);
+    color: #e6007e;
+    border: 2px solid #e6007e;
+    font-size: 1.2rem;
+    cursor: pointer; 
+    font-weight: bold;
+    margin-bottom: 75px;
+}
+
+.bottom-wrapper {
+    display: flex;
+    align-items: space-between;
+    flex-direction: column;
+}
+
+.logo {
+    height: 80%;
+    /* position: absolute; */
+    left: 0;
+    vertical-align: middle;
+}
+
+.logo-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 15%;
+    width: 100%;
+    margin-top: 170px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.lin-text {
+    margin-left: min(40px, 5vw);
+    font-size: 1.1rem;
+}
+
+a {
+    color: #e6007e;
+    text-decoration: none;
+}
